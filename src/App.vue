@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="./assets/logo.png"/>
+    <jumbo/>
+    <Title/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Title from "./components/Title.vue";
+import jumbo from "./components/jumpo.vue"
 
 export default {
+  components: { Title },
   name: "App",
   components: {
-    HelloWorld,
+    Title,
+    jumbo,
   },
 };
 </script>
@@ -25,4 +29,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+Title,img{
+  z-index: 5;
+}
+jumbo{
+  z-index: 0;
+}    
+
 </style>
